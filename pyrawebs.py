@@ -6,11 +6,11 @@ import random
 from random import randint
 from time import sleep
 
-CONSUMER_KEY = ''
-CONSUMER_SECRET = ''
+CONSUMER_KEY = 'vlXuFjArLxVUk2NnsMWMpemVQ'
+CONSUMER_SECRET = 'L1IKV1DUKKWNGzoBW7gMYx2OUHt6Bby6uJLyhtgX7OUrNigwwb'
 
-ACCESS_TOKEN = ''
-ACCESS_TOKEN_SECRET = ''
+ACCESS_TOKEN = '3234602466-e74DNGCXpMr3XYbuIwUd1xNOPDSeOxPCCCSwIzZ'
+ACCESS_TOKEN_SECRET = '8d8O2ZjuoTbHCoJqpYxd13IUGAPwOc2DOkuXjKtqxYhrX'
 
 def oauth_login(consumer_key, consumer_secret,access_key,access_secret):
   """Authenticate with twitter using OAuth"""
