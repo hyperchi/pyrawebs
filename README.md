@@ -9,7 +9,8 @@ https://github.com/tweepy/tweepy
 
 #### Setup
 **Using OAuth Authentication:**
-To begin the process we need to register our client application with Twitter. Create a new application and once you are done you should have your consumer token and secret. Enter these in your pyrawebs.py like this
+To begin the process we need to register our client application with Twitter. Create a new application and once you are done you should have your consumer token and secret. Enter these in your pyrawebs.py like this  
+
 ![](https://raw.githubusercontent.com/Karlheinzniebuhr/pyrawebs/master/images/img1.PNG)
 
 
