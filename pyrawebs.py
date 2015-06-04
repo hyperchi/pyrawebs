@@ -7,7 +7,7 @@ from random import randint
 from time import sleep
 
 #from our keys module (keys.py), import the keys dictionary
-from keys import keys
+from my_own_keys import keys
 
 CONSUMER_KEY = keys['CONSUMER_KEY']
 CONSUMER_SECRET = keys['CONSUMER_SECRET']
