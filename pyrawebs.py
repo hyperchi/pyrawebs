@@ -7,7 +7,7 @@ from random import randint
 from time import sleep
 
 #from our keys module (keys.py), import the keys dictionary
-from keys import keys
+from my_own_keys import keys
 
 CONSUMER_KEY = keys['CONSUMER_KEY']
 CONSUMER_SECRET = keys['CONSUMER_SECRET']
@@ -45,7 +45,7 @@ if __name__ == "__main__":
     l_tweets.append(line.strip().decode('utf-8'))
 
   # crear y enviar tweets
-  for tweet in l_tweets[]:
+  for tweet in l_tweets:
     actual_target = '@'
     for target in l_targets:
       tweet   = tweet.replace(actual_target, target)
