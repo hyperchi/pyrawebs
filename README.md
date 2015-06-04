@@ -17,3 +17,4 @@ To begin the process we need to register our client application with Twitter. Cr
 #### Usage
 
     python pyrawebs.py tweets.txt diputados.txt
+    python pyrawebs.py tweets.txt senadores.txt
