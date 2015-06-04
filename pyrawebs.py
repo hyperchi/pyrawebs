@@ -6,11 +6,8 @@ import random
 from random import randint
 from time import sleep
 
-CONSUMER_KEY = 'vlXuFjArLxVUk2NnsMWMpemVQ'
-CONSUMER_SECRET = 'L1IKV1DUKKWNGzoBW7gMYx2OUHt6Bby6uJLyhtgX7OUrNigwwb'
-
-ACCESS_TOKEN = '3234602466-e74DNGCXpMr3XYbuIwUd1xNOPDSeOxPCCCSwIzZ'
-ACCESS_TOKEN_SECRET = '8d8O2ZjuoTbHCoJqpYxd13IUGAPwOc2DOkuXjKtqxYhrX'
+#from our keys module (keys.py), import the keys dictionary
+from keys import keys
 
 def oauth_login(consumer_key, consumer_secret,access_key,access_secret):
   """Authenticate with twitter using OAuth"""
@@ -29,7 +26,8 @@ if __name__ == "__main__":
   arg_target  = str(sys.argv[2])
 
   f_tweets     = open(arg_tweets,'r')
-  f_targets  = open(arg_target,'r')
+  f_targets    = open(arg_target,'r')
+
 
   s_tweets     = f_tweets.readlines()
   s_targets  = f_targets.readlines()
@@ -42,11 +40,10 @@ if __name__ == "__main__":
   for line in s_tweets:
     l_tweets.append(line.strip().decode('utf-8'))
 
-
   # crear y enviar tweets
   for tweet in l_tweets:
     actual_target = '@'
-    for target in l_targets[18:]:
+    for target in l_targets[2:]:
       tweet   = tweet.replace(actual_target, target)
       if target != '':
         actual_target = target
@@ -54,10 +51,11 @@ if __name__ == "__main__":
       
       try:
         api.update_status(status=tweet)
-        espera = randint(4,20)
-        time.sleep(espera)
+        espera = randint(30,60)
         print 'espera: '+str(espera)+' segundos'
+        time.sleep(espera)
+        
       except Exception as exception:
         print exception
         print "Failed to tweet:", tweet
-      
+  print('executed successfully')
