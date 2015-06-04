@@ -9,6 +9,11 @@ from time import sleep
 #from our keys module (keys.py), import the keys dictionary
 from keys import keys
 
+CONSUMER_KEY = keys['CONSUMER_KEY']
+CONSUMER_SECRET = keys['CONSUMER_SECRET']
+ACCESS_TOKEN = keys['ACCESS_TOKEN']
+ACCESS_TOKEN_SECRET = keys['ACCESS_TOKEN_SECRET']
+
 def oauth_login(consumer_key, consumer_secret,access_key,access_secret):
   """Authenticate with twitter using OAuth"""
   auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -40,7 +45,7 @@ if __name__ == "__main__":
     l_tweets.append(line.strip().decode('utf-8'))
 
   # crear y enviar tweets
-  for tweet in l_tweets:
+  for tweet in l_tweets[3:]:
     actual_target = '@'
     for target in l_targets:
       tweet   = tweet.replace(actual_target, target)
@@ -50,7 +55,7 @@ if __name__ == "__main__":
       
       try:
         api.update_status(status=tweet)
-        espera = randint(4,20)
+        espera = randint(30,60)
         time.sleep(espera)
         print 'espera: '+str(espera)+' segundos'
       except Exception as exception:
