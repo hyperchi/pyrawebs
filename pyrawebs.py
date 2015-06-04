@@ -39,11 +39,10 @@ if __name__ == "__main__":
   for line in s_tweets:
     l_tweets.append(line.strip().decode('utf-8'))
 
-
   # crear y enviar tweets
   for tweet in l_tweets:
     actual_target = '@'
-    for target in l_targets[18:]:
+    for target in l_targets:
       tweet   = tweet.replace(actual_target, target)
       if target != '':
         actual_target = target
