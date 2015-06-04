@@ -26,8 +26,7 @@ if __name__ == "__main__":
   arg_target  = str(sys.argv[2])
 
   f_tweets     = open(arg_tweets,'r')
-  f_targets    = open(arg_target,'r')
-
+  f_targets  = open(arg_target,'r')
 
   s_tweets     = f_tweets.readlines()
   s_targets  = f_targets.readlines()
@@ -40,10 +39,11 @@ if __name__ == "__main__":
   for line in s_tweets:
     l_tweets.append(line.strip().decode('utf-8'))
 
+
   # crear y enviar tweets
   for tweet in l_tweets:
     actual_target = '@'
-    for target in l_targets[2:]:
+    for target in l_targets[18:]:
       tweet   = tweet.replace(actual_target, target)
       if target != '':
         actual_target = target
@@ -51,11 +51,10 @@ if __name__ == "__main__":
       
       try:
         api.update_status(status=tweet)
-        espera = randint(30,60)
-        print 'espera: '+str(espera)+' segundos'
+        espera = randint(4,20)
         time.sleep(espera)
-        
+        print 'espera: '+str(espera)+' segundos'
       except Exception as exception:
         print exception
         print "Failed to tweet:", tweet
-  print('executed successfully')
+      
