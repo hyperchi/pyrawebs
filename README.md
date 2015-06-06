@@ -31,5 +31,4 @@ Start the party
 
 #### Usage
 
-    python pyrawebs.py tweets.txt diputados.txt
-    python pyrawebs.py tweets.txt senadores.txt
+    python pyrawebs.py tweets.txt targets.txt
