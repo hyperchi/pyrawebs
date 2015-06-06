@@ -1,5 +1,5 @@
 # pyrawebs
-### Twitter script to spam politicians about #Pyrawebs
+### Twitter script to send protest tweets to politicians
 
 #### Dependencies  
 https://github.com/tweepy/tweepy
