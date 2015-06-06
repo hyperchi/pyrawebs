@@ -1,5 +1,5 @@
 # pyrawebs
-### Twitter script to spam politicians about #Pyrawebs
+### Twitter script to send protest tweets to politicians
 
 #### Dependencies  
 https://github.com/tweepy/tweepy
@@ -31,5 +31,4 @@ Start the party
 
 #### Usage
 
-    python pyrawebs.py tweets.txt diputados.txt
-    python pyrawebs.py tweets.txt senadores.txt
+    python pyrawebs.py tweets.txt targets.txt
